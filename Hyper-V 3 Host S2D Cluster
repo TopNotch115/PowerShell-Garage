@@ -1,4 +1,4 @@
-#This guide is for an environment that contains 3 server blades (1xASM, 1xLSM)
+#This guide is for an environment that contains 3 server blades 
 
 #PreReq | Use powershell 
 # Windows roles/features
