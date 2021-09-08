@@ -52,7 +52,7 @@ New-Volume -StoragePool (Get-StoragePool s2d*) -FileSystem CSVFS_ReFS -Size 4TB 
 #Enable VMMigration
 $Nodes = "DIV^^HOST^^^","DIV^^HOST^^^","DIV^^HOST^^^"
 
-$hostnames = $nodes|ForEach{$_+"$"}   
+$hostnames = $nodes|ForEach-Object{$_+"$"}   
 
 Enable-VMMigration $nodes
 
@@ -68,4 +68,4 @@ Set-VMHost $Nodes -VirtualHardDiskPath c:\ClusterStorage\DIV**-S2d-CSV\VHDX -Vir
 
 #Set nodes to use Kerberos and SMB.
 Set-VMHost $nodes -VirtualMachineMigrationAuthenticationType Kerberos -VirtualMachineMigrationPerformanceOption SMB 
-$nodes|ForEach{Set-ADComputer $_ -PrincipalsAllowedToDelegateToAccount $hostnames}
+$nodes|ForEach-Object{Set-ADComputer $_ -PrincipalsAllowedToDelegateToAccount $hostnames}
