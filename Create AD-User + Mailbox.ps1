@@ -10,7 +10,7 @@ $last = 'Doe'
 $rank = 'Pvt'
 $Edipi = "1234567891"
 $billet = '20.2 CE KWT - Test'
-$OrganizationalUnit = "Enter OU Location Eg = OU=Users,OU=CE,OU=SPMAGTF,OU=ME User Catalog,DC=mc,DC=com"
+$OrganizationalUnit = "Enter OU Location Eg = OU=Users,OU=CE,OU=SPMAGTF-KPOP,OU=MEIN User Catalog,DC=mc,DC=com"
 
 
 #If Above information is correct, run the script. 
